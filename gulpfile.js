@@ -18,7 +18,13 @@ gulp.task('default', ['sass', 'compile']);
 
 function compileTypeScript(done) {
   gulp.src(paths.typescript)
+    .pipe(typescript({sourcemap: true, out: 'tslib.js', sourceRoot: '../scripts'}))
+    .pipe(gulp.dest('./www/js/'))
+    .on('end', done);
+
 }
+
+gulp.task('compile', compileTypeScript);
 
 gulp.task('sass', function(done) {
   gulp.src('./www/scss/ionic.app.scss')
@@ -35,7 +41,9 @@ gulp.task('sass', function(done) {
 });
 
 gulp.task('watch', function() {
+  compileTypeScript();
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.typescript, ['compile']);
 });
 
 gulp.task('install', ['git-check'], function() {
