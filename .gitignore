@@ -4,7 +4,14 @@
 node_modules/
 
 # bower files
-www/lib
+www/lib/
+
+# Output folders
+www/js/
+www/css/
+
+# definitly typed definitions managed by tsd
+www/typings/
 
 platforms/
 plugins/
