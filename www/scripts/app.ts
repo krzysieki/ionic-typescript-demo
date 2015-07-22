@@ -18,16 +18,23 @@ myApp.service("serviceName", myNameSpace.MyServiceClassName);
 
 // UI routing (Learn more here: https://github.com/angular-ui/ui-router)
 myApp.config(($stateProvider, $urlRouterProvider) => {
-  $stateProvider.state("view", {
-    url: "/view",
-    templateUrl: "views/view.html",
-    controller: "ViewController"
-  });
+  $stateProvider
+    .state("view", {
+      url: "/view",
+      templateUrl: "views/view.html",
+      controller: "ViewController"
+    })
+    .state("home", {
+      templateUrl: "views/home.html",
+      controller: "MyController"
+    });
+
 });
 
 // Entry point
 myApp.run(
   function (
+
     $rootScope: ft.IAppRootScopeService
   ) {
     // myApp entry point

@@ -18,7 +18,7 @@ class MyController implements IMyController {
 
   public static $inject = [
     "$scope",
-    "$rootScope“
+    "$rootScope"
   ];
 
   constructor(
