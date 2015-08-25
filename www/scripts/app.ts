@@ -35,7 +35,7 @@ myApp.config(($stateProvider, $urlRouterProvider) => {
 myApp.run(
   function (
 
-    $rootScope: ft.IAppRootScopeService
+    $rootScope: IAppRootScopeService
   ) {
     // myApp entry point
   }

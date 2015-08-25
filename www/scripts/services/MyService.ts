@@ -15,11 +15,11 @@ module myNameSpace {
     constructor(
       private $log: ng.ILogService
     ) {
-      privVar = '5';
+      this.privVar = '5';
     }
 
-    someFunction(element): number {
-      return parseInt(privVar, 10);
+    public someFunction(element): number {
+      return parseInt(this.privVar, 10);
     }
 
   }
