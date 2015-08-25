@@ -17,6 +17,9 @@ platforms/
 plugins/
 
 .idea/
+www/scripts/**/*.js
+www/scripts/**/*.js.map
+
 
 
 
